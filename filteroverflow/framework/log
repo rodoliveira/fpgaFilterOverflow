@@ -1,0 +1,3 @@
+
+Compiling hp2C_D10_F6 ...
+gcc  ../filters/filterSimul.c ../filters/filterSimul_bkp.c ../filters/fut_driver.c ./src/filterChecking.c ./src/filterEval.c ./src/filterSASS.c ./src/main.c -lm -I../filters/hp2C_D10_F6 -I../filters -I./src -o hp2C_D10_F6
