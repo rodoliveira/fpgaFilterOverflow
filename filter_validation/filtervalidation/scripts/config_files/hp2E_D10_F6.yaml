@@ -1,0 +1,12 @@
+filter:
+  name: hp2E_D10_F6 
+  bits: 16
+  order: 3
+  coef_in: [26,4294967244,26]
+  coef_out: [64,4294967265,22]
+  nbits_frac: 6
+  nbits_int: 2
+  ninputs: 10
+  uplimit: 255
+  lwlimit: -256
+  

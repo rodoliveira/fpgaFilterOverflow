@@ -44,10 +44,10 @@
 
 module cycloneV_soc_mm_interconnect_2_router_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 1,
+     parameter DEFAULT_CHANNEL = 2,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 2 
+               DEFAULT_DESTID = 0 
    )
   (output [89 - 88 : 0] default_destination_id,
    output [3-1 : 0] default_wr_channel,
@@ -134,7 +134,7 @@ module cycloneV_soc_mm_interconnect_2_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h8 - 64'h0); 
+    localparam PAD0 = log2ceil(64'h200 - 64'h0); 
     localparam PAD1 = log2ceil(64'h10040 - 64'h10030); 
     localparam PAD2 = log2ceil(64'h10050 - 64'h10040); 
     // -------------------------------------------------------
@@ -195,7 +195,7 @@ module cycloneV_soc_mm_interconnect_2_router
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
-    // ( 0x0 .. 0x8 )
+    // ( 0x0 .. 0x200 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 17'h0   ) begin
             src_channel = 3'b100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;

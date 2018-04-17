@@ -1,5 +1,5 @@
 filter:
-  name: C_TO_VHDL
+  name: hp2C_D10_F6 
   bits: 16
   order: 3
   coef_in: [26,4294967244,26]

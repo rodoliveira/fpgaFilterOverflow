@@ -1,0 +1,12 @@
+filter:
+  name: lp2C_D10_F7 
+  bits: 16
+  order: 3
+  coef_in: [28,56,28]
+  coef_out: [128,4294967251,42]
+  nbits_frac: 7
+  nbits_int: 2
+  ninputs: 10
+  uplimit: 511
+  lwlimit: -512
+  

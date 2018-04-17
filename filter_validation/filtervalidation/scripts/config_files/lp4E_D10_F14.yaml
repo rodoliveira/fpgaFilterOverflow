@@ -1,0 +1,12 @@
+filter:
+  name: lp4E_D10_F14 
+  bits: 16
+  order: 5
+  coef_in: [1015,1807,2493,1807,1015]
+  coef_out: [16384,4294942663,28376,4294951145,5154]
+  nbits_frac: 14
+  nbits_int: 2
+  ninputs: 10
+  uplimit: 65535
+  lwlimit: -65536
+  

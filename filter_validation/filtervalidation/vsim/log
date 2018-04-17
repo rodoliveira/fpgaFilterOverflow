@@ -1,0 +1,319 @@
+Reading pref.tcl
+
+# 10.5b
+
+# vsim -c iir_test_tb -do "run 200 ns; exit" 
+# Start time: 20:47:56 on Mar 19,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.iir_package
+# Loading lpm.lpm_components
+# Loading work.iir_test_tb(tb)
+# Loading work.iir_test(bhv)
+# Loading lpm.lpm_hint_evaluation(body)
+# Loading lpm.lpm_mult(lpm_syn)
+# run 200 ns
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(2)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(2)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(2)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(1)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(1)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(1)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(0)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(0)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_OUTPUT_MULTIPLIERS(0)/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(2)/lpm_multX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(2)/lpm_multX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(2)/lpm_multX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(1)/lpm_multX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(1)/lpm_multX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(1)/lpm_multX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(0)/lpm_multX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(0)/lpm_multX
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /iir_test_tb/iir_test_1/GEN_INPUT_MULTIPLIERS(0)/lpm_multX
+# ** Note: y[0] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 20 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 40 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 60 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 80 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: START
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 100 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: BUSY
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: START
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 120 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: BUSY
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: START
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 140 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: BUSY
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: START
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 19692
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = 0
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 160 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: BUSY
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: START
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 19692
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = -5418
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 0
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 180 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: BUSY
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: START
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[0] = 19692
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[1] = -5418
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[2] = 6698
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[3] = 0
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[4] = 0
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[5] = 0
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[6] = 0
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[7] = 0
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: y[8] = 0
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+# ** Note: end CYCLE ---------------------
+#    Time: 200 ns  Iteration: 0  Instance: /iir_test_tb
+#  exit
+# End time: 20:47:57 on Mar 19,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 28

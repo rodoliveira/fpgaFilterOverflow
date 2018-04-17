@@ -17,7 +17,7 @@ entity iir_avalon is
   generic (
     NBITS_ADDR : integer := NBITS;
     NBITS_ADDR_MASTER : integer := 32;
-    NBITS_ADDR_SLAVE : integer := 1;
+    NBITS_ADDR_SLAVE : integer := 7;
     NBITS_DATA_MASTER : integer := NBITS;
     NBITS_DATA_SLAVE : integer := 32
     );
@@ -36,7 +36,7 @@ entity iir_avalon is
         slave_readdata      : out std_logic_vector(NBITS_DATA_SLAVE-1 downto 0);
 
         
-        -- avalon MM Master    
+        -- avalon MM Master Write    
         master_waitrequest : in std_logic;
         master_address     : out std_logic_vector(NBITS_ADDR_MASTER-1 downto 0);
         master_write       : out std_logic;
@@ -48,10 +48,19 @@ end entity iir_avalon;
 
 architecture bhv of iir_avalon is
 
-  type reg_type is array (0 to 1) of std_logic_vector(31 downto 0);
+  type reg_type is array (0 to NINPUTS) of std_logic_vector(31 downto 0);
   signal registers : reg_type := (
-    x"11223344",
-    x"AABBCCDD"
+    x"FFFF0000",
+    x"0000FFCB",
+    x"00000037",
+    x"00000037",
+    x"00000037",
+    x"00000005",
+    x"00000006",
+    x"00000007",
+    x"00000008",
+    x"00000009",
+    x"0000000A"
     );
 
    signal input_map : in_out_type := (    
@@ -80,15 +89,19 @@ architecture bhv of iir_avalon is
   signal s_writedata : std_logic_vector(NBITS_DATA_MASTER-1 downto 0) := (others => '0');
   
   signal index, count_writes : unsigned(10 downto 0) := (others => '0');
+  signal rst_n_filter : std_logic := '1';
+
+  signal overflow : std_logic := '0';
   constant ADDR_BASE_WR : std_logic_vector(NBITS_ADDR_MASTER-1 downto 0) := x"38000000";
 begin  -- architecture bhv
 
   iir_test_1: entity work.iir_test
     port map (
       clk        => clk,
-      rst_n      => rst_n,
+      rst_n      => rst_n_filter,
       start      => start_filter_core,
       input_map  => input_map,
+      overflow   => overflow,
       output_map => output_map,
       busy       => filter_busy);
 
@@ -97,19 +110,34 @@ begin  -- architecture bhv
   begin  -- process rd_wr_slave_proc
     if rst_n = '0' then                 -- asynchronous reset (active low)
       slave_readdata <= (others => '0');
-      slave_readdatavalid <= '0';      
+      slave_readdatavalid <= '0';
+      registers(0) <= x"FFFF0000";
     elsif clk'event and clk = '1' then  -- rising clock edge     
       start_filter_f <= start_filter;     
       filter_busy_f <= filter_busy;
       
+      if state = st_write_result then
+        registers(0)(0) <= overflow;
+      else
+        registers(0)(0) <= registers(0)(0);
+      end if;
+      
       --LEITURA DO SLAVE  ---- READ PROC
       if slave_read = '1' then
         slave_readdata <= registers(to_integer(unsigned(slave_address)));
-        slave_readdatavalid <= '1';
+        slave_readdatavalid <= '1';        
       --ESCRITA NO SLAVE
       elsif slave_write = '1' and slave_chipselect = '1' then
-        start_filter <= slave_writedata(0);
-        slave_readdatavalid <= '0';                
+        if unsigned(slave_address) = 0 then
+          start_filter <= slave_writedata(0);
+          slave_readdatavalid <= '0';
+        elsif unsigned(slave_address) < NINPUTS+1 then
+          registers(to_integer(unsigned(slave_address))) <= slave_writedata;
+          input_map(to_integer(unsigned(slave_address)-1)) <= slave_writedata(15 downto 0);
+          slave_readdatavalid <= '0';
+        else
+          slave_readdatavalid <= '0';  
+        end if;        
       else
         slave_readdatavalid <= '0';
       end if;      
@@ -128,7 +156,7 @@ begin  -- process wr_proc
       if master_waitrequest = '0' then
         s_address <= std_logic_vector(unsigned(s_address) + NBITS_DATA_MASTER/8);        
         index <= index + 1;
-        count_writes <= count_writes + 1;
+        count_writes <= count_writes + 1;        
       else
         s_address <= s_address;
         index <= index;
@@ -152,19 +180,17 @@ end process wr_proc;
     case state is
       when st_idle =>
         if start_filter = '1' and start_filter_f = '0' then
-          registers(0) <= x"00000001";
           state <= st_start;
         else
           state <= st_idle;
         end if;
 
       when st_start =>
-        registers(0) <= x"00000002";
+        
         state <= st_wait_finish;
 
       when st_wait_finish =>
         if filter_busy = '0' and filter_busy_f = '1' then
-          registers(0) <= x"00000003";
           state <= st_write_result;
         else
           state <= st_wait_finish;
@@ -173,11 +199,11 @@ end process wr_proc;
       when st_write_result =>
         if count_writes < NINPUTS-1 then
           state <= st_write_result;
-          registers(0) <= x"00000004";
         else
           state <= st_idle;
         end if;
-    end case;                 
+    end case;
+    
 
     end if;
   end process state_proc;
@@ -186,7 +212,7 @@ end process wr_proc;
   master_write <= '1' when state = st_write_result else '0';
   master_address <= s_address;
   start_filter_core <= '1' when state = st_start else '0';
-  
+  rst_n_filter <= '1' when rst_n = '1' and (state /= st_idle) else '0'; 
 
 
   

@@ -3,7 +3,7 @@
 echo GENERATING FILTER CONFIG FILE:
 
 FILTER_NAME=$1
-FILTERS_PATH="/home/rodrigo/ufmg/mestrado/filter_validation/filters/"
+FILTERS_PATH="/home/rodrigo/ufmg/fpgaFilterOverflow/filteroverflow/filters/"
 
 C_SCRIPT="c/printFilter.c"
 
@@ -15,7 +15,7 @@ CONFIG_EXT=".yaml"
 if [ ! -z $FILTER_NAME ]
 then
     gcc $C_SCRIPT -I$FILTERS_PATH -I$FILTERS_PATH$FILTER_NAME -w -o $EXEC_PATH$FILTER_NAME
-    $EXEC_PATH$FILTER_NAME > $CONFIG_PATH$FILTER_NAME$CONFIG_EXT
+    $EXEC_PATH$FILTER_NAME $FILTER_NAME > $CONFIG_PATH$FILTER_NAME$CONFIG_EXT
     echo Generated finish: $CONFIG_PATH$FILTER_NAME$CONFIG_EXT
 else
     echo Generated ERROR -- Wrong argument

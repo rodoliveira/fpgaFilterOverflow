@@ -85,15 +85,6 @@ def printVHDLMap(filename, vec, nfrac):
 #         print "READING CORE TEXT... OK"
             
 
-
-def printVHDLHeader():
-    # --- VHDL HEADER --- #
-    fileGen.write("---PACKAGE GENERETADED AUTOMATICALLY\n\n")
-
-def printVHDLLibraries():
-    fileGen.write("library ieee;\n")
-    fileGen.write("use ieee.std_logic_1164.all;\n")
-    fileGen.write("use ieee.std_logic_unsigned.all;\n\n")
     
 
         
@@ -108,6 +99,16 @@ portFlags = ("---@INIT_PORT", "---@END_PORT")
 fileGen = open(sys.argv[2], 'w')
 configFilename = sys.argv[1]
 # ------------ #
+
+
+def printVHDLHeader():
+    # --- VHDL HEADER --- #
+    fileGen.write("---PACKAGE GENERETADED AUTOMATICALLY\n ---FILTER: " + str(iir.entity_name) + "\n")
+
+def printVHDLLibraries():
+    fileGen.write("library ieee;\n")
+    fileGen.write("use ieee.std_logic_1164.all;\n")
+    fileGen.write("use ieee.std_logic_unsigned.all;\n\n")
 
 
 #MAIN:

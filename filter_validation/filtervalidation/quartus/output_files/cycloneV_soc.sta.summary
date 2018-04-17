@@ -6,16 +6,32 @@ Type  : Slow 1100mV 85C Model Setup 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hp
 Slack : 1.730
 TNS   : 0.000
 
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 10.320
+TNS   : 0.000
+
 Type  : Slow 1100mV 85C Model Hold 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.143
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.173
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 3.463
 TNS   : 0.000
 
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 34.654
+TNS   : 0.000
+
 Type  : Slow 1100mV 85C Model Removal 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.286
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.906
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
@@ -26,8 +42,20 @@ Type  : Slow 1100mV 85C Model Minimum Pulse Width 'cycloneV_soc:cycloneV_soc_2|c
 Slack : 0.623
 TNS   : 0.000
 
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 18.484
+TNS   : 0.000
+
 Type  : Slow 1100mV 0C Model Setup 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 1.727
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 10.460
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.157
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -38,8 +66,16 @@ Type  : Slow 1100mV 0C Model Recovery 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_
 Slack : 3.554
 TNS   : 0.000
 
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 34.946
+TNS   : 0.000
+
 Type  : Slow 1100mV 0C Model Removal 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.280
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.808
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
@@ -50,8 +86,20 @@ Type  : Slow 1100mV 0C Model Minimum Pulse Width 'cycloneV_soc:cycloneV_soc_2|cy
 Slack : 0.630
 TNS   : 0.000
 
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 18.473
+TNS   : 0.000
+
 Type  : Fast 1100mV 85C Model Setup 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 12.377
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.048
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -62,8 +110,16 @@ Type  : Fast 1100mV 85C Model Recovery 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc
 Slack : 3.774
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 36.088
+TNS   : 0.000
+
 Type  : Fast 1100mV 85C Model Removal 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.397
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.398
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
@@ -74,8 +130,20 @@ Type  : Fast 1100mV 85C Model Minimum Pulse Width 'cycloneV_soc:cycloneV_soc_2|c
 Slack : 0.891
 TNS   : 0.000
 
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 18.146
+TNS   : 0.000
+
 Type  : Fast 1100mV 0C Model Setup 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 12.555
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.036
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -84,6 +152,14 @@ TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 3.872
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 36.578
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.313
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
@@ -96,6 +172,10 @@ TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'cycloneV_soc:cycloneV_soc_2|cycloneV_soc_hps_0:hps_0|cycloneV_soc_hps_0_hps_io:hps_io|cycloneV_soc_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
 Slack : 0.894
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 18.125
 TNS   : 0.000
 
 ------------------------------------------------------------

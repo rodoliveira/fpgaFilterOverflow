@@ -162,7 +162,7 @@ module cycloneV_soc (
 	wire         mm_interconnect_2_fut_0_slave_chipselect;              // mm_interconnect_2:fut_0_slave_chipselect -> fut_0:slave_chipselect
 	wire  [31:0] mm_interconnect_2_fut_0_slave_readdata;                // fut_0:slave_readdata -> mm_interconnect_2:fut_0_slave_readdata
 	wire         mm_interconnect_2_fut_0_slave_waitrequest;             // fut_0:slave_waitrequest -> mm_interconnect_2:fut_0_slave_waitrequest
-	wire   [0:0] mm_interconnect_2_fut_0_slave_address;                 // mm_interconnect_2:fut_0_slave_address -> fut_0:slave_address
+	wire   [6:0] mm_interconnect_2_fut_0_slave_address;                 // mm_interconnect_2:fut_0_slave_address -> fut_0:slave_address
 	wire         mm_interconnect_2_fut_0_slave_read;                    // mm_interconnect_2:fut_0_slave_read -> fut_0:slave_read
 	wire         mm_interconnect_2_fut_0_slave_readdatavalid;           // fut_0:slave_readdatavalid -> mm_interconnect_2:fut_0_slave_readdatavalid
 	wire         mm_interconnect_2_fut_0_slave_write;                   // mm_interconnect_2:fut_0_slave_write -> fut_0:slave_write
@@ -175,7 +175,7 @@ module cycloneV_soc (
 	iir_avalon #(
 		.NBITS_ADDR        (16),
 		.NBITS_ADDR_MASTER (32),
-		.NBITS_ADDR_SLAVE  (1),
+		.NBITS_ADDR_SLAVE  (7),
 		.NBITS_DATA_MASTER (16),
 		.NBITS_DATA_SLAVE  (32)
 	) fut_0 (

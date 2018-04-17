@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(5CSEMA4U23) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA4U23) Path("/home/rodrigo/ufmg/mestrado/filter_validation/filtervalidation/quartus/output_files/") File("cycloneV_soc.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA4U23) Path("/home/rodrigo/ufmg/fpgaFilterOverflow/filter_validation/filtervalidation/quartus/output_files/") File("cycloneV_soc.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

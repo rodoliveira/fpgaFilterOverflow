@@ -46,7 +46,7 @@ module cycloneV_soc_mm_interconnect_2 (
 		input  wire        clk_0_clk_clk,                                                       //                                                     clk_0_clk.clk
 		input  wire        hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset, // hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset.reset
 		input  wire        led_reset_reset_bridge_in_reset_reset,                               //                               led_reset_reset_bridge_in_reset.reset
-		output wire [0:0]  fut_0_slave_address,                                                 //                                                   fut_0_slave.address
+		output wire [6:0]  fut_0_slave_address,                                                 //                                                   fut_0_slave.address
 		output wire        fut_0_slave_write,                                                   //                                                              .write
 		output wire        fut_0_slave_read,                                                    //                                                              .read
 		input  wire [31:0] fut_0_slave_readdata,                                                //                                                              .readdata
@@ -485,7 +485,7 @@ module cycloneV_soc_mm_interconnect_2 (
 	);
 
 	altera_merlin_slave_translator #(
-		.AV_ADDRESS_W                   (1),
+		.AV_ADDRESS_W                   (7),
 		.AV_DATA_W                      (32),
 		.UAV_DATA_W                     (32),
 		.AV_BURSTCOUNT_W                (1),

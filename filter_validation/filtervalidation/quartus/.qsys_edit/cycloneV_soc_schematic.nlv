@@ -5,7 +5,6 @@ preplace inst cycloneV_soc.hps_0.gpio1 -pg 1
 preplace inst cycloneV_soc.hps_0.wd_timer1 -pg 1
 preplace inst cycloneV_soc.hps_0.f2s_sdram_ref_clk -pg 1
 preplace inst cycloneV_soc.hps_0.f2s_periph_ref_clk -pg 1
-preplace inst cycloneV_soc.bridge_stSrcMmMaster_0 -pg 1 -lvl 3 -y 30
 preplace inst cycloneV_soc.hps_0.dcan1 -pg 1
 preplace inst cycloneV_soc.hps_0.gmac0 -pg 1
 preplace inst cycloneV_soc.hps_0.gpio2 -pg 1
@@ -14,13 +13,12 @@ preplace inst cycloneV_soc.hps_0.timer -pg 1
 preplace inst cycloneV_soc.hps_0.gmac1 -pg 1
 preplace inst cycloneV_soc.hps_0.eosc2 -pg 1
 preplace inst cycloneV_soc.hps_0.clk_0 -pg 1
-preplace inst cycloneV_soc.autocorrelation_0 -pg 1 -lvl 5 -y 170
-preplace inst cycloneV_soc.sw -pg 1 -lvl 5 -y 450
+preplace inst cycloneV_soc.sw -pg 1 -lvl 7 -y 440
 preplace inst cycloneV_soc.hps_0.usb0 -pg 1
 preplace inst cycloneV_soc.hps_0.L2 -pg 1
-preplace inst cycloneV_soc.clock_bridge_0 -pg 1 -lvl 4 -y 490
+preplace inst cycloneV_soc.fut_0 -pg 1 -lvl 5 -y 170
 preplace inst cycloneV_soc -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst cycloneV_soc.led -pg 1 -lvl 5 -y 350
+preplace inst cycloneV_soc.led -pg 1 -lvl 7 -y 340
 preplace inst cycloneV_soc.hps_0.usb1 -pg 1
 preplace inst cycloneV_soc.hps_0.spim0 -pg 1
 preplace inst cycloneV_soc.hps_0.clkmgr -pg 1
@@ -30,7 +28,7 @@ preplace inst cycloneV_soc.hps_0.qspi -pg 1
 preplace inst cycloneV_soc.hps_0.spim1 -pg 1
 preplace inst cycloneV_soc.hps_0.uart0 -pg 1
 preplace inst cycloneV_soc.hps_0.hps_io.border -pg 1
-preplace inst cycloneV_soc.hps_0 -pg 1 -lvl 4 -y 260
+preplace inst cycloneV_soc.hps_0 -pg 1 -lvl 6 -y 250
 preplace inst cycloneV_soc.hps_0.uart1 -pg 1
 preplace inst cycloneV_soc.hps_0.dma -pg 1
 preplace inst cycloneV_soc.hps_0.axi_sdram -pg 1
@@ -44,7 +42,7 @@ preplace inst cycloneV_soc.hps_0.nand0 -pg 1
 preplace inst cycloneV_soc.hps_0.i2c0 -pg 1
 preplace inst cycloneV_soc.hps_0.timer1 -pg 1
 preplace inst cycloneV_soc.hps_0.bridges -pg 1
-preplace inst cycloneV_soc.onchip_memory2_0 -pg 1 -lvl 5 -y 270
+preplace inst cycloneV_soc.onchip_memory2_0 -pg 1 -lvl 7 -y 260
 preplace inst cycloneV_soc.hps_0.axi_ocram -pg 1
 preplace inst cycloneV_soc.hps_0.i2c1 -pg 1
 preplace inst cycloneV_soc.hps_0.timer2 -pg 1
@@ -54,28 +52,21 @@ preplace inst cycloneV_soc.hps_0.hps_io -pg 1
 preplace inst cycloneV_soc.hps_0.i2c2 -pg 1
 preplace inst cycloneV_soc.hps_0.timer3 -pg 1
 preplace inst cycloneV_soc.hps_0.arm_a9_1 -pg 1
-preplace inst cycloneV_soc.d5m_camera_0 -pg 1 -lvl 5 -y 550
-preplace inst cycloneV_soc.clk_0 -pg 1 -lvl 1 -y 40
-preplace inst cycloneV_soc.lupa_fake_0 -pg 1 -lvl 2 -y 40
+preplace inst cycloneV_soc.clk_0 -pg 1 -lvl 1 -y 30
 preplace inst cycloneV_soc.hps_0.i2c3 -pg 1
 preplace inst cycloneV_soc.hps_0.gpio0 -pg 1
 preplace inst cycloneV_soc.hps_0.wd_timer0 -pg 1
 preplace inst cycloneV_soc.hps_0.fpga_interfaces -pg 1
-preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.d5m_camera_0_conduit_end,(SLAVE)d5m_camera_0.conduit_end) 1 0 5 NJ 580 NJ 580 NJ 580 NJ 580 NJ
-preplace netloc POINT_TO_POINT<net_container>cycloneV_soc</net_container>(MASTER)lupa_fake_0.avalon_streaming_source,(SLAVE)bridge_stSrcMmMaster_0.avalon_streaming_sink) 1 2 1 700
-preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)cycloneV_soc.reset) 1 0 1 NJ
-preplace netloc FAN_IN<net_container>cycloneV_soc</net_container>(SLAVE)hps_0.f2h_sdram0_data,(MASTER)autocorrelation_0.avalon_master,(MASTER)bridge_stSrcMmMaster_0.avalon_master) 1 3 3 1010 140 NJ 140 1700
-preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.led_external_connection,(SLAVE)led.external_connection) 1 0 5 NJ 420 NJ 420 NJ 420 NJ 420 NJ
-preplace netloc FAN_OUT<net_container>cycloneV_soc</net_container>(SLAVE)hps_0.h2f_axi_clock,(MASTER)clk_0.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)lupa_fake_0.clock,(SLAVE)onchip_memory2_0.clk1,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)bridge_stSrcMmMaster_0.clock_mem,(SLAVE)led.clk,(SLAVE)autocorrelation_0.clock,(SLAVE)sw.clk,(SLAVE)bridge_stSrcMmMaster_0.clock) 1 1 4 420 130 720 160 970 180 1380
-preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.autocorrelation_0_conduit_end,(SLAVE)autocorrelation_0.conduit_end) 1 0 5 NJ 200 NJ 200 NJ 200 NJ 200 NJ
-preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.pxl_clk,(SLAVE)clock_bridge_0.in_clk) 1 0 4 NJ 500 NJ 500 NJ 500 NJ
+preplace netloc POINT_TO_POINT<net_container>cycloneV_soc</net_container>(MASTER)fut_0.avalon_master,(SLAVE)hps_0.f2h_sdram0_data) 1 5 1 1720
+preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.led_external_connection,(SLAVE)led.external_connection) 1 0 7 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 450 NJ
 preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)clk_0.clk_in,(SLAVE)cycloneV_soc.clk) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>cycloneV_soc</net_container>(MASTER)clock_bridge_0.out_clk,(SLAVE)d5m_camera_0.clock) 1 4 1 NJ
-preplace netloc POINT_TO_POINT<net_container>cycloneV_soc</net_container>(SLAVE)onchip_memory2_0.s1,(MASTER)hps_0.h2f_axi_master) 1 4 1 1320
-preplace netloc FAN_OUT<net_container>cycloneV_soc</net_container>(SLAVE)led.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)sw.reset,(SLAVE)d5m_camera_0.reset_sink,(SLAVE)bridge_stSrcMmMaster_0.reset_sink,(MASTER)clk_0.clk_reset,(SLAVE)lupa_fake_0.reset_sink,(SLAVE)autocorrelation_0.reset) 1 1 4 400 150 700 220 NJ 220 1340
-preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.memory,(SLAVE)hps_0.memory) 1 0 4 NJ 350 NJ 350 NJ 350 NJ
-preplace netloc FAN_OUT<net_container>cycloneV_soc</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)sw.s1,(SLAVE)led.s1,(SLAVE)autocorrelation_0.avalon_slave_0,(SLAVE)bridge_stSrcMmMaster_0.slave) 1 2 3 740 180 NJ 160 1400
-preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.sw_external_connection,(SLAVE)sw.external_connection) 1 0 5 NJ 480 NJ 480 NJ 480 NJ 480 NJ
-preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.hps_io,(SLAVE)hps_0.hps_io) 1 0 4 NJ 310 NJ 310 NJ 310 NJ
-levelinfo -pg 1 0 190 1740
-levelinfo -hier cycloneV_soc 200 230 450 770 1130 1450 1720
+preplace netloc FAN_OUT<net_container>cycloneV_soc</net_container>(SLAVE)fut_0.reset_sink,(MASTER)clk_0.clk_reset,(SLAVE)sw.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)led.reset) 1 1 6 NJ 60 NJ 60 NJ 60 1110 370 NJ 430 2090
+preplace netloc POINT_TO_POINT<net_container>cycloneV_soc</net_container>(SLAVE)onchip_memory2_0.s1,(MASTER)hps_0.h2f_axi_master) 1 6 1 2050
+preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)hps_0.memory,(SLAVE)cycloneV_soc.memory) 1 0 6 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ
+preplace netloc FAN_OUT<net_container>cycloneV_soc</net_container>(SLAVE)fut_0.clock,(MASTER)clk_0.clk,(SLAVE)led.clk,(SLAVE)sw.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)onchip_memory2_0.clk1,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)hps_0.h2f_axi_clock) 1 1 6 NJ 40 NJ 40 NJ 40 1130 260 1700 410 2070
+preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.sw_external_connection,(SLAVE)sw.external_connection) 1 0 7 NJ 470 NJ 470 NJ 470 NJ 470 NJ 470 NJ 490 NJ
+preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>cycloneV_soc</net_container>(SLAVE)cycloneV_soc.hps_io,(SLAVE)hps_0.hps_io) 1 0 6 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ
+preplace netloc FAN_OUT<net_container>cycloneV_soc</net_container>(SLAVE)led.s1,(SLAVE)sw.s1,(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)fut_0.slave) 1 4 3 1150 430 NJ 470 2030
+levelinfo -pg 1 0 150 2300
+levelinfo -hier cycloneV_soc 160 190 410 730 1090 1410 1840 2140 2290

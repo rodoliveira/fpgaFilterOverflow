@@ -1,0 +1,7 @@
+# vsim iir_test_tb -c 
+# Start time: 17:09:05 on Mar 15,2018
+# ** Error (suppressible): (vsim-19) Failed to access library 'work' at "work".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 17:09:05 on Mar 15,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

@@ -1,0 +1,10 @@
+filter:
+  name: C_TO_VHDL
+  bits: 16
+  order: 3
+  coef_in: [7,13,7]
+  coef_out: [32,4294967284,6]
+  nbits_frac: 5
+  nbits_int: 2
+  ninputs: 10
+  

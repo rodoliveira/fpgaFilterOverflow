@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
   
   int count = 0;
   printf("filter:\n  ");
-  printf("name: C_TO_VHDL\n  ");
+  printf("name: %s \n  ", argv[1]);
   printf("bits: 16\n  ");
   printf("order: %i\n  ", order);
   printf("coef_in: [");
